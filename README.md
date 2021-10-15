@@ -21,7 +21,7 @@ Each group has different permissions:
 - User: can bet on auctions and also sees their images
 - Seller: can bet on auctions, sees images and can create auctions
 - Admin: can do all of the above plus moderating operations like *ban*
-- 
+
 ## Title Screen
 This is what you would see if you were logged in as a user. Currently there is just one auction live. The auctions on the title screen aren't static - there are three different categories that would get shown: **New, Hot & Featured**. The card positioning is done by using Bootstrap's responsive grid system.
   
