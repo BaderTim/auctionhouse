@@ -23,7 +23,7 @@ Each group has different permissions:
 - Admin: can do all of the above plus moderating operations like *ban*
 - 
 ## Title Screen
-This is what you would see if you were logged in as a user. Currently there is just one auction live. The auctions on the title screen aren't static - there are three different categories that get shown: New, Hot & Featured.
+This is what you would see if you were logged in as a user. Currently there is just one auction live. The auctions on the title screen aren't static - there are three different categories that would get shown: **New, Hot & Featured**. The card positioning is done by using Bootstrap's responsive grid system.
   
 ![title screen_user](https://github.com/BaderTim/auctionhouse/blob/main/images/title%20screen.JPG?raw=true)
   
