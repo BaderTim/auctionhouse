@@ -13,7 +13,7 @@ This repository contains everything my fellow student and me achieved so far. In
     - Password: `test`
 
 # Preview & Additional Information
-Here are some images and additional information of the auctionhouse application.  
+Here are some images and additional information of the auctionhouse application. Some images are zoomed out/in.  
   
 The auctionhouse seperates users into four different groups: **Visitor, User, Seller & Admin**.  
 Each group has different permissions:
