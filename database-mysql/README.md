@@ -1,6 +1,10 @@
-# Introduction 
-Auction house
+# database-mysql 
+This is the database part of the auctionhouse project. It was made by using MySQL and PHPMyAdmin.
 
 # Getting Started
-- Setup frontend, backend and databse
-- Login with demo seller-account: E-Mail `test123@account.de` and password `test`
+- Install MySQL MariaDB and optionally PHPMyAdmin (or XAMPP v3.2.4 for testing)
+- Import the database
+- Create the following accounts and set their password in the backend database settings:
+    - `auctionhouse_guest` - perms: SELECT
+    - `auctionhouse_user` - perms: SELECT,INSERT,UPDATE,DELETE
+- Configure your network settings and add the ip adress to the backend database settings
