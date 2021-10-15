@@ -1,5 +1,5 @@
 # backend-springboot 
-This is the backend part of the Auktionshaus project. Its framework is based on Java Spring Boot (https://start.spring.io/).  
+This is the backend part of the auctionhouse project. Its framework is based on Java Spring Boot (https://start.spring.io/).  
 
 # Getting Started
 - Clone repository
