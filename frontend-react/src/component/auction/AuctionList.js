@@ -1,9 +1,6 @@
 import React from "react";
 
 import "./auctionList.css";
-import {NavLink} from "react-router-dom";
-import $ from 'jquery'
-import AuctionListElement from "./AuctionListElement";
 
 export default class AuctionList extends React.Component {
 

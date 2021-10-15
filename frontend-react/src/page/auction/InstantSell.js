@@ -8,7 +8,7 @@ import BettingField from "./BettingField";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 
-class Auction extends React.Component {
+class InstantSell extends React.Component {
 
     constructor(props) {
         super(props);
@@ -364,8 +364,7 @@ class Auction extends React.Component {
                                                 </div>
                                              </div>           
                                              <hr/>
-                                             
-                                             <div>{Number(this.state.auction.unix_ending_time)>Number(Date.now())?
+                                             <div>{Number(this.state.auction.endingTime)>Number(Date.now())?
                                                ( <div class="card" style={{marginBottom:"15px"}}>
                                                 <h5 class="card-header">Betting Area</h5>
                                                 <div class="card-body"  >
@@ -587,7 +586,7 @@ class Auction extends React.Component {
     
 
 }
-export default withRouter(Auction);
+export default withRouter(InstantSell);
 
 const Images = (props) => {
     console.log(props.images);

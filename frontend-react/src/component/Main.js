@@ -30,7 +30,6 @@ import RatingPage from "../page/profile/RatingPage";
 import Other from "../page/auction/Other";
 import PhotoAlbum from "../page/auction/PhotoAlbum";
 import SellerAccount from "../page/profile/SellerAccount";
-import AuctionOverview from "../page/Admin/AuctionOverview";
 
 
 export default class Main extends React.Component {
@@ -78,7 +77,6 @@ export default class Main extends React.Component {
 
                 <Route exact path='/statistics' render={() => <Statistics session={this.props.session}/>}/>
                 <Route exact path='/statistics/allusers' render={() => <UserOverview session={this.props.session}/>}/>
-                <Route exact path='/statistics/allauctions' render={() => <AuctionOverview session={this.props.session}/>}/>
                 <Route path="/" render={() => <NotFound/>}/>
             </Switch>
         )

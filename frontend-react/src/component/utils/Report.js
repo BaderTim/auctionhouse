@@ -1,7 +1,6 @@
 import React from "react";
 import "./report.css";
 import $ from "jquery";
-import {NavLink} from "react-router-dom";
 import Popover from "@material-ui/core/Popover";
 
 

@@ -1,7 +1,6 @@
 import React from "react";
 import $ from "jquery";
 import "./alert.css";
-import App from "../../App";
 
 export default class Alert extends React.Component {
 

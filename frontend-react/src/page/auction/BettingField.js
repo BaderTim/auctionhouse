@@ -163,26 +163,20 @@ export default class BettingField extends React.Component {
             <div class="row mb-3">
                 
             <div className="col-md-6" style={{paddingLeft: "16px"}}>
-                <div style={{marginLeft:"15px"}}>{
+                <div>{
                 <label htmlFor="input_bet" className="form-label" ><strong>Ending Time:</strong><p style={{color:"red"}}>{this.state.timer.days}d {this.state.timer.hours}h {this.state.timer.min}m {Number(this.state.timer.sec).toFixed(0)}s</p></label>
                 }</div>
                 <div class="container">
                 <div class="row">
-                <div class="alert alert-info " role="alert">
-                    dw-auction uses the english formating for a price. E.g. 5.45€ means 545 cents.  
-                    </div>
-                    </div>    
-                <div class="row">
-                    
                     <div class="col-sm">
                         <input type="text" className="form-control" id="input_bet" placeholder={this.state.current_price} aria-describedby="input_bet"
                     onChange={(e) => 
-                        {(e.target.value === "" ?
-                        (e.target.setAttribute("class", "form-control is-invalid")) :
-                        (/^(([1-9][0-9]*(,|\.)[0-9]{1})|[1-9][0-9]*)$/.test(e.target.value) ?
-                            (this.handlePriceChange(e)) :
-                            (e.target.setAttribute("class", "form-control is-invalid"))))}} required/>
-                        <div id="input_bet_feedback" className="invalid-feedback" >Your bet has to be higher then the current price and must not contain any letters or signs.</div>
+                        
+                        
+                        {(($("#input_bet").val() <=this.state.current_price )?
+                        (e.target.parentElement.setAttribute("class", "col-md-6")) :
+                        (e.target.parentElement.setAttribute("class", "col-md-6 was-validated"))
+                        )}} required/>
                         </div>
                         <div class="col-sm"><h2>{this.props.currency==="eur"?("€"):("$")}</h2></div>
                     </div>
@@ -190,8 +184,8 @@ export default class BettingField extends React.Component {
                 <div id="input_bet_feedback" className="invalid-feedback" >Your bet has to be higher then the current price.</div>
              </div>
              </div>
-             <div class="row mb-3"style={{marginLeft:"1px"}}>
-             <div className="col-md-6" >
+             <div class="row mb-3">
+             <div className="col-md-6" style={{paddingLeft: "16px"}}>
              {this.state.bet ? (
                         <button className="btn btn-primary" disabled>Loading....</button>
                     ) : (
@@ -205,16 +199,7 @@ export default class BettingField extends React.Component {
         (
             <div></div>
         )
-        }</div>);
-    }
-    handlePriceChange(e) {
-        e.target.setAttribute("class", "form-control is-valid");
-        e.target.value = e.target.value.replace(",", ".");
-        if(Number(e.target.value)<=Number(this.state.current_price))
-        {
-            e.target.setAttribute("class", "form-control is-invalid");
-        }
-    }
+        }</div>);}
 
 
 }

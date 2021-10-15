@@ -15,9 +15,8 @@ export default class App extends React.Component {
 
     constructor(props) {
 
+        const ip = "http://localhost:8080"
 
-        const ip = "api.dw-auction.com";
-        // const ip = "localhost"
         super(props);
         this.state = {session: null, alerts: []};
         const local_session = localStorage.getItem("auctionhouse_session");
@@ -28,18 +27,14 @@ export default class App extends React.Component {
                 this.state.session = parsed_session;
             } else {
                 console.log("Session expired.");
-                this.state.session = {key: "", seller_id: 0, duration: parsed_session.duration, first_name: "", user_id: -1,  admin:parsed_session.admin,ip: "https://"+ip/*+":8443"*/, writable: true};
+                this.state.session = {key: "", seller_id: 0, duration: parsed_session.duration, first_name: "", user_id: -1,  admin:parsed_session.admin,ip: ip, writable: true};
                 this.add_alert({type: "danger", size: "sm", header: "",
                     text: "Your session has expired. Please sign in again.",
                     subtext: ""})
             }
         } else {
             console.log("No session found.");
-
-            this.state.session = {key: "", seller_id: 0, duration: 0, first_name: "", user_id: -1,admin:false, ip: "https://"+ip+"", writable: true};
-            this.add_alert({type: "primary", size: "md", header: "Disclaimer",
-                text: "The focus of dw-auction.com lays on distributing a platform to history interested people trying to buy or sell historic images.",
-                subtext: "THIS IS NOT A PLACE FOR RACISM OR RIGHT WING NETWORKING! Breaking our Code of Conduct will result in a permanent ban from our systems."})
+            this.state.session = {key: "", seller_id: 0, duration: 0, first_name: "", user_id: -1,admin:false, ip: ip, writable: true};
             this.add_alert({type: "warning", size: "sm",
                 text: "Please log in or create an account to view content like images."})
         }

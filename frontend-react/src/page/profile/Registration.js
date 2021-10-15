@@ -11,7 +11,7 @@ import { isValidPhoneNumber } from 'react-phone-number-input'
 import { Redirect } from 'react-router-dom'
 import TextField from "@material-ui/core/TextField";
 import moment from "moment";
-import CountryDropdown from "../../component/registration/CountryDropdown";
+
 export default class Registration extends React.Component {
 
     constructor(props) {
@@ -353,7 +353,10 @@ export default class Registration extends React.Component {
                                         </div>
                                         <div className="col-md-5" >
                                             <label htmlFor="country" className="form-label">Country:</label>
-                                                   <CountryDropdown id="country"/>
+                                                    <input type="text" className="form-control" id="country" aria-describedby="country"
+                                                        onChange={(e) => {(e.target.value === null ?
+                                                            (e.target.parentElement.setAttribute("class", "col-md-5")) :
+                                                            (e.target.parentElement.setAttribute("class", "col-md-5 was-validated")))}} required/>
                                             <div id="country_feetback" className="invalid-feedback">Please provide a valid country name.</div>
                                         </div>
                                         <div className="col-md-12" style={{paddingLeft: "16px"}}><hr/></div>

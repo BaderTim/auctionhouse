@@ -1,5 +1,4 @@
 import React from "react";
-import $ from "jquery";
 import "./filter.css";
 
 export default class LoadMore extends React.Component {

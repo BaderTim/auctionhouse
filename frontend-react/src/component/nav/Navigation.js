@@ -2,9 +2,6 @@ import React from "react";
 import "./navigation.css";
 import {NavLink} from "react-router-dom";
 import $ from 'jquery'
-import * as EmailValidator from 'email-validator';
-import { Flag } from 'semantic-ui-react'
-import { ThemeProvider } from "@material-ui/core";
 
 export default class Navigation extends React.Component{
 
@@ -124,7 +121,11 @@ export default class Navigation extends React.Component{
         } else if(this.props.session.duration < Date.now()/1000) {
             return this.nav_not_logged_in(house_icon, "Session expired", false);
         } else {
-            if(this.props.session.seller_id > 0) {
+            if(this.props.session.admin)
+            {
+                return this.nav_logged_in_admin(house_icon, person_icon, person_text_icon, chat_icon, hour_glass_icon, card_icon, door_icon);
+            }
+            else if(this.props.session.seller_id > 0) {
                 return this.nav_logged_in_as_seller(house_icon, person_icon, person_text_icon, chat_icon, hour_glass_icon, plus_icon, door_icon);
             } else {
                 return this.nav_logged_in_without_seller(house_icon, person_icon, person_text_icon, chat_icon, hour_glass_icon, card_icon, door_icon);
@@ -133,7 +134,38 @@ export default class Navigation extends React.Component{
     }
 
 
-     
+    nav_logged_in_admin(house_icon, person_icon, person_text_icon, chat_icon, hour_glass_icon, card_icon, door_icon)
+    {
+        return(<nav className="navbar sticky-top navbar-dark bg-dark">
+        <NavLink exact to="/" className="navbar-brand">{house_icon} dw-auction</NavLink>
+        <div className="nav-right">
+            <NavLink className="nav-item"  to="statistics"> Admin Panel</NavLink>
+            <span className="nav-spacer">|</span>
+            <NavLink className="nav-item" to="/profile/watchlist">Watchlist</NavLink>
+                        <span className="nav-spacer">|</span>
+                        <NavLink className="nav-item" to="/profile/current-bets">Current Bets</NavLink>
+                        <span className="nav-spacer">|</span>
+                        <button className={this.state.profile_dropdown ? ("nav-item secret-button sb-active") : ("nav-item secret-button")}
+                                onClick={() => {this.state.profile_dropdown ?
+                                (this.setState({profile_dropdown: false})) : (this.setState({profile_dropdown: true})) }}>
+                            Profile {person_icon}
+                        </button>
+                        {this.state.profile_dropdown && (
+                            <div className="dropdown-menu dropdown-menu-right">
+                                <NavLink onClick={() => {this.setState({profile_dropdown: false})}} className="dropdown-item" to="/profile">{person_text_icon} My Profile</NavLink>
+                                <div className="nav-dropdown-hr"/>
+                                <NavLink onClick={() => {this.setState({profile_dropdown: false})}} className="dropdown-item" to="/profile/chat">{chat_icon} Chat</NavLink>
+                                <div className="nav-dropdown-hr"/>
+                                <NavLink onClick={() => {this.setState({profile_dropdown: false})}} className="dropdown-item" to="/profile/history/bets">{hour_glass_icon} Bet History</NavLink>
+                                <div className="nav-dropdown-hr"/>
+                                <NavLink onClick={() => {this.setState({profile_dropdown: false})}} className="dropdown-item" to="/profile/seller-registration">{card_icon} Seller Registration</NavLink>
+                                <div className="nav-dropdown-hr"/>
+                                <button onClick={() => {this.setState({profile_dropdown: false}); localStorage.setItem("auctionhouse_session", null); window.location.href = "/";}}
+                                        className="dropdown-item secret-button logout">{door_icon} Logout</button>
+                            </div>)}
+        </div>
+    </nav>)
+    }
     nav_logged_in_without_seller(house_icon, person_icon, person_text_icon, chat_icon, hour_glass_icon, card_icon, door_icon) {
 
          return (
@@ -141,7 +173,6 @@ export default class Navigation extends React.Component{
                 <nav className="navbar sticky-top navbar-dark bg-dark">
                     <NavLink exact to="/" className="navbar-brand">{house_icon} dw-auction</NavLink>
                     <div className="nav-right">
-                        <div style={{float: "left"}}>{this.props.session.admin?( <div><NavLink className="nav-item"  to="/statistics"> Admin Panel</NavLink> <span className="nav-spacer">|</span></div>):(<div></div>)}</div>
                         <NavLink className="nav-item" to="/profile/watchlist">Watchlist</NavLink>
                         <span className="nav-spacer">|</span>
                         <NavLink className="nav-item" to="/profile/current-bets">Current Bets</NavLink>
@@ -177,8 +208,6 @@ export default class Navigation extends React.Component{
             <nav className="navbar sticky-top navbar-dark bg-dark">
                 <NavLink exact to="/" className="navbar-brand">{house_icon} dw-auction</NavLink>
                 <div className="nav-right">
-                    <div style={{float: "left"}}>{this.props.session.admin?( <div><NavLink className="nav-item"  to="/statistics"> Admin Panel</NavLink> <span className="nav-spacer">|</span></div>):(<div></div>)}</div>
-                                            
                     <NavLink className="nav-item" to="/profile/watchlist">Watchlist</NavLink>
                     <span className="nav-spacer">|</span>
                     <NavLink className="nav-item" to="/profile/current-bets">Current Bets</NavLink>

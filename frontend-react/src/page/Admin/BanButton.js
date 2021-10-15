@@ -1,25 +1,18 @@
-import { lighten } from "@material-ui/core";
 import React from "react";
 
+//fehler beheben 
 export default class BanButton extends React.Component {
 //<BanButton session={this.props.session} userid={6} banned={true}/>
     constructor(props) {
         super(props);
         this.state = {
-            userid:0,
-            banned:null,
-            message:"",
+            userid:this.props.userid,
+            banned:this.props.banned,
+            message:"123",
             error:"",
         };
     }
-    componentDidMount()
-    {
-        this.setState({userid:this.props.userid,
-                        banned:this.props.banned,
-                        message:"123",
-                        error:"",})
-        
-    }
+
     
      banUser(e)
     {
@@ -42,12 +35,22 @@ export default class BanButton extends React.Component {
         
         fetch(this.props.session.ip+'/account/admin/ban', requestOptions)
             .then(async response => {
-                let data = await response;
+                let data = await response.json();
                 // check for error response
-                
+                if(response.status === 200)
+                {
+                    this.setState({banned:true})
+                }
                 if (!response.ok) {
-                    
-                    this.setState({banned:false});
+                    const nice_error = data.error.split(/ (.+)/)
+                    this.setState({error: nice_error})
+                    alert(nice_error[1]);
+                    if(nice_error[1] === "This user has been banned already.")
+                    {
+                        this.setState({banned:true});
+                    }
+                    else{
+                    this.setState({banned:false});}
                    
                     
                 } else if (response.ok){
@@ -79,14 +82,20 @@ export default class BanButton extends React.Component {
         
         fetch(this.props.session.ip+'/account/admin/unban', requestOptions)
             .then(async response => {
-                let data = await response;
+                let data = await response.json();
                 
                 // check for error response
                 
                 if (!response.ok) {
-                   
-                    this.setState({banned:true});
-                   
+                    const nice_error = data.error.split(/ (.+)/)
+                    this.setState({error: nice_error})
+                    alert(nice_error[1]);
+                    if(nice_error[1] === "The user you are trying to unban is not banned.")
+                    {
+                        this.setState({banned:false});
+                    }
+                    else{
+                    this.setState({banned:true});}
 
                 } else {
                     alert("User was unbanned succesfully")

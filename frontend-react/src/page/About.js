@@ -58,7 +58,6 @@ export default class About extends React.Component {
 
     render() {
         const open = Boolean(this.state.anchorEl);
-        const id = open ? 'simple-popover' : undefined;
 
         const handleClick = (event) => {
             this.setState({anchorEl: event.currentTarget});
