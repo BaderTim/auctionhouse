@@ -1,0 +1,39 @@
+.ww2-jumbo {
+    background-color: rgba(255, 255, 255, 0.86) !important;    /* 50% opaque blue */
+    color: black;
+    min-height: 90%;
+    min-width: 100%;
+    margin-bottom: 4rem!important;
+}
+.ww2-small-jumbo {
+    padding: 25px 35px 25px 35px!important;
+}
+.ww2-header {
+    text-align: center;
+}
+.ww2-sub-nav {
+    display: flex;
+    justify-content: center;
+    font-weight: 600!important;
+    color: coral;
+}
+.ww2-sub-nav a {
+    color: coral;
+    text-decoration: none!important;
+}
+.ww2-sub-nav a:hover {
+    color: #ba5f3d;
+}
+
+.ww2-sub-nav-spacer {
+    color: black;
+    font-weight: 400;
+    padding: 0 10px 0 10px
+}
+.card-auction-end {
+    float: right;
+    padding-top: 1px;
+}
+.card-auction-badge {
+    font-size: 13px!important;
+}

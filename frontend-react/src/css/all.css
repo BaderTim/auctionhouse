@@ -1,0 +1,53 @@
+.all-jumbo {
+    background-color: rgba(255, 255, 255, 0.86) !important;    /* 50% opaque blue */
+    color: black;
+    min-height: 90%;
+    min-width: 100%;
+    margin-bottom: 4rem!important;
+}
+.all-small-jumbo {
+    padding: 25px 35px 25px 35px!important;
+}
+.all-header {
+    text-align: center;
+}
+.all-sub-nav {
+    display: flex;
+    justify-content: center;
+    font-weight: 600!important;
+    color: coral;
+}
+.all-sub-nav a {
+    color: coral;
+    text-decoration: none!important;
+}
+.all-sub-nav a:hover {
+    color: #ba5f3d;
+}
+
+.all-sub-nav-spacer {
+    color: black;
+    font-weight: 400;
+    padding: 0 10px 0 10px
+}
+.card-auction-end {
+    float: right;
+    padding-top: 1px;
+}
+.card-auction-badge {
+    font-size: 13px!important;
+}
+.anti-navlink, .anti-navlink:link, .anti-navlink:visited, .anti-navlink:hover, .anti-navlink:active {
+    text-decoration: none;
+    color: black;
+}
+
+.dw-auction-header h4 {
+    font-size: 28px;
+    font-weight: 800;
+    color: coral;
+    text-decoration: none!important;
+}
+.dw-auction-header h4:hover {
+    color: #ba5f3d;
+}

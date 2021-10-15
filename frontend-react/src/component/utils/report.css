@@ -1,0 +1,13 @@
+content {
+    width: 180px;
+}
+.content a {
+    color: #2d2d91;
+}
+.content a:hover {
+    text-decoration: none!important;
+    color: #2d2d91;
+}
+.report {
+    cursor: pointer;
+}

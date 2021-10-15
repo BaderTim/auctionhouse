@@ -1,0 +1,39 @@
+.home-jumbo {
+    background-color: rgba(255, 255, 255, 0.86) !important;    /* 50% opaque blue */
+    color: black;
+    min-height: 90%;
+    min-width: 100%;
+    margin-bottom: 4rem!important;
+}
+.home-small-jumbo {
+    padding: 25px 35px 25px 35px!important;
+}
+.home-header {
+    text-align: center;
+}
+.home-sub-nav {
+    display: flex;
+    justify-content: center;
+    font-weight: 600!important;
+    color: coral;
+}
+.home-sub-nav a {
+    color: coral;
+    text-decoration: none!important;
+}
+.home-sub-nav a:hover {
+    color: #ba5f3d;
+}
+
+.home-sub-nav-spacer {
+    color: black;
+    font-weight: 400;
+    padding: 0 10px 0 10px
+}
+.card-auction-end {
+    float: right;
+    padding-top: 1px;
+}
+.card-auction-badge {
+    font-size: 13px!important;
+}

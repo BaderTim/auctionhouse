@@ -1,0 +1,56 @@
+.chat-jumbo {
+    background-color: rgba(255, 255, 255, 0.86) !important;    /* 50% opaque blue */
+    color: black;
+    min-height: 90%;
+    min-width: 100%;
+    margin-bottom: 4rem!important;
+}
+.chat-small-jumbo {
+    padding: 25px 35px 25px 35px!important;
+}
+.partner-response {
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+    padding: .75rem 1.25rem;
+    margin-bottom: 5px;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+.your-response {
+    color: #383d41;
+    background-color: #e2e3e5;
+    border-color: #d6d8db;
+    padding: .75rem 1.25rem;
+    margin-bottom: 5px;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+#chat_card_body {
+    max-height: 550px;
+}
+#chat_card_message_container {
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

@@ -1,0 +1,42 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.6.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'com.baderundletters.auktionshaus'
+version = '0.2.1'
+sourceCompatibility = '1.8'
+
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+}
+
+repositories {
+	mavenCentral()
+	jcenter()
+}
+// gradlew build --refresh-dependencies
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'com.google.code.gson:gson:2.8.6'
+	implementation 'org.json:json:20171018'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation "com.stripe:stripe-java:20.35.0"
+	compile "io.springfox:springfox-swagger2:2.9.2"
+	compile 'io.springfox:springfox-swagger-ui:2.9.2'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.16'
+	compile group: 'javax.mail', name: 'mail', version: '1.4.1'
+	runtime "mysql:mysql-connector-java:8.0.16"
+}
+
+test {
+	useJUnitPlatform()
+}

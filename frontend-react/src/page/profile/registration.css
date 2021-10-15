@@ -1,0 +1,12 @@
+.form-control:focus, .nav-focused {
+    color: #341e1e !important;
+    background-color: #ffffff !important;
+    border-color: #ff8080 !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 52, 52, 0.25) !important;
+}
+.form-control-success:focus, .nav-succ-focused {
+    color: #1e341e !important;
+    background-color: #ffffff!important;
+    border-color: #88ff80!important;
+    box-shadow: 0 0 0 0.2rem rgba(106, 255, 52, 0.25) !important;
+}

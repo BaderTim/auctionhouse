@@ -1,0 +1,13 @@
+.alert-container {
+    display: flex;
+    justify-content: space-between;
+}
+.alert {
+    position: fixed!important; /* Sit on top of the page content */
+    bottom: 20px;
+    right: 20px!important;
+    min-width: 50%!important;
+    max-width: 80%!important;
+    z-index: 100; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /*Add a pointer on hover */
+}

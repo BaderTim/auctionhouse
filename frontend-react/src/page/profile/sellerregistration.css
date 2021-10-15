@@ -1,0 +1,10 @@
+.sellerregistration-jumbo {
+    background-color: rgba(255, 255, 255, 0.86) !important;    /* 50% opaque blue */
+    color: black;
+    min-height: 90%;
+    min-width: 100%;
+    margin-bottom: 4rem!important;
+}
+.sellerregistration-small-jumbo {
+    padding: 25px 35px 25px 35px!important;
+}

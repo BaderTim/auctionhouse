@@ -1,0 +1,29 @@
+.Footer {
+    position: fixed;
+    left: 0;
+    height: 40px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    color: lightgrey;
+    font-size: 15px;
+}
+.footer-spacer {
+    margin-right: 13px;
+    margin-left: 13px;
+}
+.footer-current {
+    font-weight: bold;
+    color: coral!important;
+}
+.footer-link {
+    text-decoration: none!important;
+    color: white;
+}
+.footer-link:hover {
+    color: white;
+    font-weight: bold;
+    transition: 200ms;
+    color: coral;
+}

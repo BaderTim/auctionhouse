@@ -1,0 +1,45 @@
+.dark-overlay {
+    filter: brightness(70%);
+    transition: 0.3s;
+}
+
+@media screen and (min-width: 1600px) {
+    .large-container {
+        max-width: 1600px!important;
+        margin: auto;
+    }
+}
+
+.navbar-overlap {
+    position: fixed!important;
+    right: 0;
+    left: 0;
+    height: 20px;
+}
+
+.app-wrapper {
+    position: relative;
+}
+.app-content {
+    position: relative;
+    z-index: 10;
+    font-family: monospace!important;
+    color: white;
+}
+.main {
+    padding: 0px 16px 0px 16px;
+    overflow: hidden;
+}
+button {
+    font-family: monospace!important;
+}
+body {
+    position: relative!important;
+    overflow: visible!important;
+}
+.app-background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}

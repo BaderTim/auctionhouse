@@ -1,0 +1,35 @@
+
+
+.rating-container {
+    height: 130px;
+    margin-top: auto;
+}
+.product-rating {
+    font-size: 50px;
+}
+
+.content {
+    width: 180px;
+}
+.content a {
+    color: #2d2d91;
+}
+.content a:hover {
+    text-decoration: none!important;
+    color: #2d2d91;
+}
+.stars {
+    cursor: pointer;
+}
+.stars i {
+    font-size: 18px;
+    color: #a0a0a0;
+}
+
+.earned {
+    color: #000000!important;
+}
+
+.rating-text {
+    margin-top: 10px;
+}

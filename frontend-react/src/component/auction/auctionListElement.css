@@ -1,0 +1,40 @@
+.auction-listing-link, .auction-listing-link:link, .auction-listing-link:visited, .auction-listing-link:hover, .auction-listing-link:active {
+    text-decoration: none;
+    color: black;
+}
+.auction-listing {
+    transition: transform .2s;
+}
+.auction-listing:hover {
+    transform: scale(1.03) translateZ(0);
+    backface-visibility: hidden;
+}
+.card-auction-start {
+    float: right;
+    padding-top: 2px;
+}
+.card-img-top {
+    max-height: 200px;
+}
+.card-auction-badge {
+    font-size: 13px!important;
+    min-width: 15%;
+    max-width: 50%;
+    margin: 15px auto 0px 15px;
+}
+.card-auction-end {
+    float: right;
+    font-size: 12px!important;
+    margin: 15px 15px 0px auto;
+}
+.card-auction-user {
+    margin-right: 10px;
+    float: left;
+}
+.card-spacer {
+    visibility:hidden!important;
+}
+
+.card-footer {
+    margin-top: auto;
+}
