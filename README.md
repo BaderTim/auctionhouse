@@ -1,5 +1,5 @@
 # auctionhouse 
-This auctionhouse project is a fullstack web application that was developed by a fellow student of mine and myself for a friend in late 2020. It is about ancient pictures from the (early) 20th century.   
+This auctionhouse project is a fullstack web application that was developed by a fellow student of mine ([Xena Letters](https://github.com/xenaletters)) and myself for a friend in late 2020. It is about ancient pictures from the (early) 20th century.   
 Sadly the project came to nothing since our friend decided he did not want to host an auctionhouse anymore after some time - so we had to cancel it.  
   
 This repository contains everything my fellow student and me achieved so far. In retrospective we were close to finishing the project, but still had some major items on our TODO list like reworking the security system, adding SSL to our database and fixing some design issues. I worked on both the backend and the frontend, while my partner was in contact with the stakeholders and also helped develop the frontend. We used Azure DevOps for the development.
