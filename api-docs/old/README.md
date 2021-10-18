@@ -1,5 +1,5 @@
 # API Diagramm
-![auktionshaus api diagramm.png](https://github.com/BaderTim/auctionhouse/blob/main/api-docs/old/api_diagram_old.png?raw=true)
+![auktionshaus api diagramm.png](https://github.com/BaderTim/auctionhouse/blob/main/api-docs/old/api_diagram_old.jpg?raw=true)
 
 # API Beschreibung
 <br>
